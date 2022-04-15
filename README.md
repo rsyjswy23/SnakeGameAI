@@ -10,22 +10,22 @@ I use reinforcement learning to train a bot to play Snake game. The snake gets r
 
 ## Training Results:
 
-<b>At the beignning, the snake knows nothing about the environment and moves randomly and always dies early by hitting the wall.</b>
+<pre> At the beignning, the snake knows nothing about the environment and moves randomly and always dies early by hitting the wall.</pre>
 ![](./image/6cndel.gif)
 ![](./image/6cndh7.gif)
 
 
-<b>As she learns from mistakes, she starts to be aware of boundary and learns to walk along the wall while keeping herself safe.</b>
+<pre>As she learns from mistakes, she starts to be aware of boundary and learns to walk along the wall while keeping herself safe.</pre>
 ![](./image/6cnduq.gif)
 ![](./image/6cne2l.gif)
 
 
-<b>As game counts reach over 70, she makes a major progress: she tries to reach the apple with fewest step as possible. But she easily runs to her long body and the highest score is below 30.</b>
+<pre>As game counts reach over 70, she makes a major progress: she tries to reach the apple with fewest step as possible. But she easily runs to her long body and the highest score is below 30.</pre>
 ![](./image/6cneah.gif)
 ![](./image/6cneh5.gif)
 
 
-<b>As she keeps teaching herself through trial and errors, she becomes a master of this game and even better than human. </b>
+<pre>As she keeps teaching herself through trial and errors, she becomes a master of this game and even better than human. </pre>
 ![](./image/6cney9.gif)
 
 ## Design & Implementation: 
@@ -36,21 +36,21 @@ I use reinforcement learning to train a bot to play Snake game. The snake gets r
 
 I used Dense neural network with an input layer of size 11 and one dense layer with 256 neurons and output of 3 neurons. Each input and output neuron can have a value between 0 and 1, and each weight can have a value between -1 and 1.
 
-Input: The state of current game from environment is translated to array of size 11: 
+    1. Input: The state of current game from environment is translated to array of size 11: 
            state = [danger_straight, danger_right, danger_left,   
                     curDir_left, curDir_right, curDir_up, curDir_down,
-                    food_on_left, food_on_right, food_on_up, food_on_down ]
+                    food_on_left, food_on_right, food_on_up, food_on_down]
 
-Hidden Layers: The hidden layers are activated by the ReLU activation function.
+    2. Hidden Layers: The hidden layers are activated by the ReLU activation function.
 
-Output: The output layer contains the three moves the snake can make (forward, left or Right) 
+    3. Output: The output layer contains the three moves the snake can make (forward, left or Right) 
             output = [1, 0, 0] # [forward, turn right, turn left]
 
 ## Three Modules in this project:
 
-- 1. The Environment: snake game that built with Pygame
+1. The Environment: snake game that built with Pygame
 
-- 2. The Agent (Intermediary between Environment and Model):
+2. The Agent (Intermediary between Environment and Model):
     * get_state(game): translate current game to state (array with 11 bolean values indicates danger, current direction & food)
     * get_action(state): call model for getting the next state of the snake
     * train(): 
@@ -58,14 +58,14 @@ Output: The output layer contains the three moves the snake can make (forward, l
         * Store the current state, move performed and the reward
         * Train short memory
 
-- 3. The Model (Reinforcement model built with PyTorch for move prediction):
+3. The Model (Reinforcement model built with PyTorch for move prediction):
     * create class Linear_Qnet:
         * init 2 layers linear neural network
         * forward(x): use activation function to output a prediction, given the input tensor x
     * save trained model as dictionary for future use
     * create class Trainer:
         * init model parameters: learning rate, discount rate, epilon(first exploration, then exploitation)
-        * use Adam optimizer to update parameters and zeroes gradients. 
+        * use Adam optimizer to update parameters and zeroes gradients
             * gradient-based optimization of stochastic objective functions
             * computes individual adaptive learning rates for different parameters
         * use Mean squared error loss function to backpropagate that loss to update weight
