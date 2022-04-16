@@ -20,12 +20,12 @@ I use reinforcement learning to train a bot to play Snake game. The snake gets r
 ![](./image/2.1.gif)
 
 
-<pre>As game counts reach over 70, she makes a major progress: she tries to reach the apple with fewest step as possible. But she easily runs to her long body and the highest score is below 30.</pre>
+<pre>As game counts reach over 70, she makes a major progress: she tries to reach the apple with fewest step as possible. But she easily runs to her long body.</pre>
 ![](./image/3.0.gif)
 ![](./image/3.1.gif)
 
 
-<pre>As she keeps teaching herself through trial and errors, she becomes a master of this game and even better than human. </pre>
+<pre>As she keeps teaching herself through trial and error, she becomes a master of this game and even better than human. </pre>
 ![](./image/4.0.gif)
 ![](./image/4.1.gif)
 
