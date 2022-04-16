@@ -11,22 +11,23 @@ I use reinforcement learning to train a bot to play Snake game. The snake gets r
 ## Training Results:
 
 <pre> At the beignning, the snake knows nothing about the environment and moves randomly and always dies early by hitting the wall.</pre>
-![](./image/6cndel.gif)
-![](./image/6cndh7.gif)
+![](./image/1.0.gif)
+![](./image/1.1.gif)
 
 
 <pre>As she learns from mistakes, she starts to be aware of boundary and learns to walk along the wall while keeping herself safe.</pre>
-![](./image/6cnduq.gif)
-![](./image/6cne2l.gif)
+![](./image/2.0.gif)
+![](./image/2.1.gif)
 
 
 <pre>As game counts reach over 70, she makes a major progress: she tries to reach the apple with fewest step as possible. But she easily runs to her long body and the highest score is below 30.</pre>
-![](./image/6cneah.gif)
-![](./image/6cneh5.gif)
+![](./image/3.0.gif)
+![](./image/3.1.gif)
 
 
 <pre>As she keeps teaching herself through trial and errors, she becomes a master of this game and even better than human. </pre>
-![](./image/6cney9.gif)
+![](./image/4.0.gif)
+![](./image/4.1.gif)
 
 ## Design & Implementation: 
 ![image](./image/summary.jpg)
