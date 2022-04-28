@@ -1,5 +1,5 @@
 ## AI Driven Snake Game using Deep Q Learning
-<i>This project was adapted from Vedant Goswami's [tutorial](https://www.geeksforgeeks.org/ai-driven-snake-game-using-deep-q-learning/) and [code](https://github.com/vedantgoswami/SnakeGameAI). </i>
+<i>This project was adapted from Vedant Goswami's [project](https://www.geeksforgeeks.org/ai-driven-snake-game-using-deep-q-learning/). </i>
 
 I use reinforcement learning to train a bot to play Snake game. The snake gets reward when she eats an apple, and gets penalty when she dies(either collide with her body or hit the wall). The goal of the game is to keep the snake alive as along as possible by not letting her hit with a wall or collide with her body.
 
