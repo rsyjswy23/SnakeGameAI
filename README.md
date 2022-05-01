@@ -1,7 +1,9 @@
 ## AI Driven Snake Game using Deep Q Learning
 <i>This project was adapted from Vedant Goswami's [project](https://www.geeksforgeeks.org/ai-driven-snake-game-using-deep-q-learning/). </i>
 
-I use reinforcement learning to train a bot to play Snake game. The snake gets reward when she eats an apple, and gets penalty when she dies(either collide with her body or hit the wall). The goal of the game is to keep the snake alive as along as possible by not letting her hit with a wall or collide with her body.
+I use reinforcement learning to train a bot to play Snake game. The snake gets reward when she eats an apple, and gets penalty when she dies(either collide with her body or hit the wall). The goal of the game is to keep the snake alive as along as possible and maximize rewards.
+
+
 
 ## Game Rule:
     1. Snake has to move either forward, left or right.
@@ -88,8 +90,7 @@ Deep learning framework comparison: pyTorch vs. TensorFlow:
     - dynamic computation graphing:    
         pyTorch is DEFINED BY RUN.
         variable length input + output use dynamic graph (recurrent network) 
-        easy to debug
-https://towardsdatascience.com/understanding-pytorch-with-an-example-a-step-by-step-tutorial-81fc5f8c4e8e
+        easy to debug [link] (https://towardsdatascience.com/understanding-pytorch-with-an-example-a-step-by-step-tutorial-81fc5f8c4e8e)
 
 - TensorFlow:
     - symbolic programing: 
