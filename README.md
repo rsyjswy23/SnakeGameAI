@@ -1,23 +1,30 @@
 ## AI Driven Snake Game using Deep Q Learning
-<i>This project was adapted from Vedant Goswami's [project](https://www.geeksforgeeks.org/ai-driven-snake-game-using-deep-q-learning/). </i>
-
-I use reinforcement learning to train a bot to play Snake game. The snake gets reward when she eats an apple, and gets penalty when she dies(either collide with her body or hit the wall). The goal of the game is to keep the snake alive as along as possible and maximize rewards.
+<i>This project was based on Mauro Comi's [article](https://towardsdatascience.com/how-to-teach-an-ai-to-play-games-deep-reinforcement-learning-28f9b920440a) : How to teach AI to play Games: Deep Reinforcement Learning</i>
 
 
+## About this project:
+
+In this project, I built a snake game with Pygame, and implemented reinforcement learning and deep Q networks using PyTorch to train an agent to learn to play snake game. The goal is to maximize the cumulative reward based on the current state of the environment.
+
+### Selection of ML approach: 
+There are 3 main types of machine learning: 
+    <p>1. Supervised Learning: it uses a training dataset, which includes inputs and correct outputs to teach model to yield the desired output. Common Algorithms are linear regression, logistic regression, SVM, naive bayes, decision trees, etc. </p>
+    <p>2. Unsupervised Learning: it uses unlabeled data to discover patterns that help solve for clustering or association problems. This is particularly useful when common properties within a data set are unsure. Common clustering algorithms are hierarchical, k-means, and Gaussian mixture models. </p>
+    <p>3. Reinforcement Learning: it uses a reward-penalty method to teach an AI agent. If it makes the right move, it gets rewarded. If it makes a mistake, it receives a penalty. It focuses on how AI agent should take actions in an environment to maximize the total reward. The training is done in real time with continuous feedback to maximize the possibility of being rewarded. I used this approach to train the agent.</p>
 
 ## Game Rule:
-    1. Snake has to move either forward, left or right.
-    2. Snake dies when hits wall or her body.
+    1. Snake has to move either forward, turn left or right.
+    2. Snake dies when hits the wall or her body.
     3. For every eaten apple, snake's length increases by 1 and a new apple is generated on a random unoccupied place.
+ The snake gets reward when she eats an apple, and gets penalty when she dies.
 
 ## Training Results:
 
-<pre> At the beignning, the snake knows nothing about the environment and moves randomly and always dies early by hitting the wall.</pre>
-![](./image/1.0.gif)
+<pre> Initially, the snake knows nothing about the environment and moves randomly and always dies early by hitting the wall.</pre>
 ![](./image/1.1.gif)
 
 
-<pre>As she learns from mistakes, she starts to be aware of boundary and learns to walk along the wall while keeping herself safe.</pre>
+<pre>As she learns from mistakes, she starts to walk along the wall while keeping herself safe.</pre>
 ![](./image/2.0.gif)
 ![](./image/2.1.gif)
 
@@ -32,6 +39,9 @@ I use reinforcement learning to train a bot to play Snake game. The snake gets r
 ![](./image/4.1.gif)
 
 ## Design & Implementation: 
+
+In reinforcement learning, there are 2 major components: the environment(game) and agent(snake). Every time the agent performs an action, the environment gives a reward to agent, which can be positive or negative depending on how good the action was from that specific state. States are observations that agent receives at each iteration from the environment.  
+
 ![image](./image/summary.jpg)
 
 
@@ -47,9 +57,9 @@ I used Dense neural network with an input layer of size 11 and one dense layer w
     2. Hidden Layers: The hidden layers are activated by the ReLU activation function.
 
     3. Output: The output layer contains the three moves the snake can make (forward, left or Right) 
-            output = [1, 0, 0] # [forward, turn right, turn left]
+            output = [1, 0, 0] # [forward, turn left, turn right]
 
-## Three Modules in this project:
+### Three Modules in this project:
 
 1. The Environment: snake game that built with Pygame
 
