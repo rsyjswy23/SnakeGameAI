@@ -100,7 +100,7 @@ Deep learning framework comparison: pyTorch vs. TensorFlow:
     - dynamic computation graphing:    
         pyTorch is DEFINED BY RUN.
         variable length input + output use dynamic graph (recurrent network) 
-        easy to debug [link] (https://towardsdatascience.com/understanding-pytorch-with-an-example-a-step-by-step-tutorial-81fc5f8c4e8e)
+        easy to debug [link](https://towardsdatascience.com/understanding-pytorch-with-an-example-a-step-by-step-tutorial-81fc5f8c4e8e)
 
 - TensorFlow:
     - symbolic programing: 
